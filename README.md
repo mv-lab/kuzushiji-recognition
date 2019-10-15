@@ -94,7 +94,7 @@ At the end we used Hourglass and the output are boxes instead of only the center
 The classification model was a **resnet18**, pretrained on ImageNet, with the input being a fixed *256x256* pixel area, scaled down to *128x128*, centered at the (predicted) center of the character. 
 The training data included a *background class*, whose training examples were random 256x256 crops of the pages with no labelled characters. 
 Training was done using the **fastai** library, with [standard fastai transforms](https://docs.fast.ai/vision.transform.html#get_transforms) and MixUp. 
-This model achieved a Classification accuracy of **94.6%** on a validation set (20% of the train data, group split by book).
+This model achieved a Classification accuracy of **93.6%** on a validation set (20% of the train data, group split by book).
 
 ## Augmentations
 
