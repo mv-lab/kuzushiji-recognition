@@ -16,7 +16,7 @@ from math import ceil
 
 def create_heatmap(image_fn, labels, intensity_res=50):
     """Creates heatmap showing center points as ellipses (radii proportional to height/width)"""
-    # Some code from anokas' kernel
+    # Some code from anokas' kernel: https://www.kaggle.com/anokas/kuzushiji-visualisation
     
     # Convert annotation string to array
     if type(labels) == float:
