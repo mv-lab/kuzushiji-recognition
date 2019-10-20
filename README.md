@@ -1,14 +1,24 @@
 # Kuzushiji Recognition
 ### *Opening the door to a thousand years of Japanese culture*
+**_[Official Kaggle Competition](https://www.kaggle.com/c/kuzushiji-recognition/overview)_**
 
-<a href="https://www.kaggle.com/c/kuzushiji-recognition/overview"><img src="https://i.ibb.co/6PTh3Fs/Screenshot-from-2019-10-15-20-45-26.png" alt="Screenshot-from-2019-10-15-20-45-26" border="0"></a><br /><a target='_blank' href='https://es.imgbb.com/'></a><br />
+<a href="https://www.kaggle.com/c/kuzushiji-recognition/overview"><img src="https://i.ibb.co/6PTh3Fs/Screenshot-from-2019-10-15-20-45-26.png" border="0"></a>
 
----
+----
 
-Official Kaggle Competition: https://www.kaggle.com/c/kuzushiji-recognition/overview
+## [Japanese Culture and AI Symposium 2019](http://codh.rois.ac.jp/symposium/japanese-culture-ai-2019/)
+
+We were invited to present this solution at *Japanese Culture and AI Symposium 2019* in Tokyo, Japan on November 11.
 
 <br>
-<img src="http://static.mxbi.net/umgy001-010-smallannomasked.jpg" border="0">
+<br>
+
+<p align="center">  
+  <img src="japanese-culture-ai-2019-flyer.svg" width="350" title="hover text">
+</p>
+
+----
+
 <br>
 
 ### Build a model to transcribe ancient Kuzushiji into contemporary Japanese characters
@@ -28,17 +38,12 @@ The hosts need help from machine learning experts to transcribe Kuzushiji into c
 
 - [Tomohiro Takesako aka Tom](https://www.kaggle.com/tikutiku)
 - [Ollie Perrée](https://www.kaggle.com/ollieperree)
-- [Marcos aka Nanashi (me)](https://www.kaggle.com/jesucristo)
+- [Marcos V. aka Nanashi (me)](https://www.kaggle.com/jesucristo)
 
-### Prizes
-
-We finished at 9th place of 293 teams, only 4 places to these great prizes :(
-
-<a href="https://www.kaggle.com/c/kuzushiji-recognition/overview/prizes"><img src="https://i.ibb.co/W3DfScL/Screenshot-from-2019-10-15-21-12-48.png" alt="Screenshot-from-2019-10-15-21-12-48" border="0"></a><br /><a target='_blank' href='https://es.imgbb.com/'></a><br />
 
 ---
 
-# 9th place Solution
+# 9th place Solution: Simple but efficient.
 
 Please check the notebook: **[Kuzushiji Recognition Starter](https://www.kaggle.com/jesucristo/kuzushiji-recognition-starter)** 
 
@@ -61,7 +66,7 @@ One issue with using 1024x1024 crops of the page as the input were **"artifacts"
 
 These artifacts were related with the drawings and annotations!
 (See carefully the *red* dots at the images)
-How did we fix this? Check **ensemble** and **pseudolabels**
+How did we fix this? Check **ensemble**
 
 ---
 
@@ -139,13 +144,28 @@ For the image IMG we take the most external centers from 3 predictions:
 ``` 
 At the picture this boxes are represented by 3 different colours (yellow, blue, red). 
 Finally, we take the **intersection** of those 3 boxes, the black rectangle defined as (X,Y,Z,W), and we drop all the centers out of the black box! with this technique we could eliminate artifacts like predictions at the edges.
-I have to say that the idea is cool, but I found 2 bugs and this technique didn't work properly :(
+
+## References
+
+- [Deep Learning for Classical Japanese Literature](https://arxiv.org/abs/1812.01718)
+- [ROIS-DS Center for Open Data in the Humanities (CODH)](http://codh.rois.ac.jp/)
+- [CenterNet: Keypoint Triplets for Object Detection](https://arxiv.org/abs/1904.08189)
+- [Albumentations: fast and flexible image augmentations](https://arxiv.org/abs/1809.06839)
 
 
-## Bonus
+## Acknowledgements
 
-A samurai with 3 swords... that emblem... this reminds me to something :)
+We would like to thank the organizers:
 
-![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F2779868%2Fd7568f09270098f7a80994266db642e0%2Fkozuki.jpg?generation=1571164389635754&amp;alt=media)
+- [Center for Open Data in the Humanities (CODH)](http://codh.rois.ac.jp/)
+- [The National Institute of Japanese Literature (NIJL)](https://www.nijl.ac.jp/en/)
+- [The National Institute of Informatics (NII)](https://www.nii.ac.jp/en/)
+- [Kaggle](https://www.kaggle.com/)
 
-![](https://4.bp.blogspot.com/-7PGWzBKQauw/Vt7985zYQgI/AAAAAAAAACQ/PCIQQcSGkrg/s400/Kozuki%2BFamily.jpg)
+and the Official Collaborators: Mikel Bober-Irizar (anokas) Kaggle Grandmaster and Alex Lamb (MILA. Quebec Artificial Intelligence Institute)
+
+
+
+
+
+
